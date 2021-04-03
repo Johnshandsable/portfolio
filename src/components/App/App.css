@@ -1,0 +1,12 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'New Tegomin', serif;
+}
+
+.App {
+  top: 0;
+  border: 3px solid black;
+  background-color: pink;
+}
