@@ -3,17 +3,17 @@ import './App.css';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 // Material UI
-import { fade, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
-import MenuItem from '@material-ui/core/MenuItem';
-import MenuList from '@material-ui/core/MenuList';
 import Typography from '@material-ui/core/Typography';
+import GetAppTwoToneIcon from '@material-ui/icons/GetAppTwoTone';
 
 import AboutSection from '../AboutSection/AboutSection';
 import TechSection from '../TechSection/TechSection';
+import ProjectsSection from '../ProjectsSection/ProjectsSection';
 
 function App() {
   const theme = createMuiTheme({
@@ -35,6 +35,7 @@ function App() {
     grow: {
       flexGrow: 1,
       backgroundColor: '#506477',
+      marginTop: '10%',
     },
     end: {
       justifyContent: 'center',
@@ -53,7 +54,6 @@ function App() {
               <Typography variant="h2" color="primary">
                 John Shands
               </Typography>
-              <div className="Box"></div>
               <Typography variant="h4" color="secondary">
                 Full-Stack Developer
               </Typography>
@@ -63,13 +63,15 @@ function App() {
                 component={Link}
                 to={process.env.PUBLIC_URL + 'resume.pdf'}
                 variant="outlined"
+                endIcon={<GetAppTwoToneIcon />}
               >
-                Get Resume
+                Download Resume
               </Button>
             </Grid>
           </Grid>
           <AboutSection />
           <TechSection />
+          <ProjectsSection />
         </div>
       </ThemeProvider>
     </Router>
