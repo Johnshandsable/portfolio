@@ -2,15 +2,17 @@ import './App.css';
 
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 
+// Material UI
 import { fade, makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
-
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import MenuItem from '@material-ui/core/MenuItem';
 import MenuList from '@material-ui/core/MenuList';
 import Typography from '@material-ui/core/Typography';
+
+import AboutSection from '../AboutSection/AboutSection';
 import TechSection from '../TechSection/TechSection';
 
 function App() {
@@ -23,6 +25,9 @@ function App() {
         main: '#27e8a7',
       },
       type: 'dark',
+    },
+    typography: {
+      fontFamily: 'monaco, Consolas, Lucida Console, monospace',
     },
   });
 
@@ -45,23 +50,11 @@ function App() {
         <div className="App">
           <Grid className={classes.grow} container spacing={3}>
             <Grid item xs={12} sm={6}>
-              <Typography
-                variant="h2"
-                color="primary"
-                style={{
-                  fontFamily: 'monaco',
-                  textAlign: 'center',
-                }}
-              >
+              <Typography variant="h2" color="primary">
                 John Shands
               </Typography>
               <div className="Box"></div>
-              <Typography
-                variant="h4"
-                style={{
-                  color: '#27e8a7',
-                }}
-              >
+              <Typography variant="h4" color="secondary">
                 Full-Stack Developer
               </Typography>
             </Grid>
@@ -75,6 +68,7 @@ function App() {
               </Button>
             </Grid>
           </Grid>
+          <AboutSection />
           <TechSection />
         </div>
       </ThemeProvider>
