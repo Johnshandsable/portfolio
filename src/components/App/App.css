@@ -1,7 +1,7 @@
 body,
 html {
   margin: 0;
-  padding: 0;
+  padding: 20;
   background-color: #506477;
   font-family: monaco, Consolas, Lucida Console, monospace;
 }
