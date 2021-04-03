@@ -2,7 +2,6 @@ body,
 html {
   margin: 0;
   padding: 20;
-  background-color: #506477;
   font-family: monaco, Consolas, Lucida Console, monospace;
 }
 
@@ -10,7 +9,7 @@ html {
   top: 0;
   height: 100%;
   width: 100%;
-  background-color: #506477;
+  background-color: #424242;
 }
 
 .Box {

@@ -1,25 +1,19 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
-import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
-import GetAppTwoToneIcon from '@material-ui/icons/GetAppTwoTone';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import { Link } from "react-router-dom";
+import Toolbar from "@material-ui/core/Toolbar";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
+import GetAppTwoToneIcon from "@material-ui/icons/GetAppTwoTone";
 
 const useStyles = makeStyles((theme) => ({
-  toolbar: {
-    borderBottom: `1px solid ${theme.palette.divider}`,
-  },
   toolbarTitle: {
     flex: 1,
+    textAlign: "left",
   },
-  toolbarSecondary: {
-    justifyContent: 'space-between',
-    overflowX: 'auto',
-  },
-  toolbarLink: {
-    padding: theme.spacing(1),
-    flexShrink: 0,
+  secondary: {
+    marginLeft: 25,
+    textAlign: "left",
   },
 }));
 
@@ -28,18 +22,19 @@ export default function Header() {
 
   return (
     <React.Fragment>
-      <Toolbar className={classes.toolbar}>
+      <Toolbar>
         <Typography
-          variant="h1"
+          variant="h2"
           align="center"
           color="primary"
+          noWrap
           className={classes.toolbarTitle}
         >
           John Shands
         </Typography>
         <Button
           component={Link}
-          to={process.env.PUBLIC_URL + 'ShandsJohn-R.pdf'}
+          to={process.env.PUBLIC_URL + "ShandsJohn-R.pdf"}
           color="secondary"
           variant="outlined"
           endIcon={<GetAppTwoToneIcon />}
@@ -47,6 +42,15 @@ export default function Header() {
           Download Resume
         </Button>
       </Toolbar>
+      <Typography
+        className={classes.secondary}
+        variant="h4"
+        color="secondary"
+        align="center"
+        noWrap
+      >
+        Full-Stack Developer
+      </Typography>
     </React.Fragment>
   );
 }
