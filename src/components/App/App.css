@@ -13,3 +13,14 @@ html {
   border: 3px solid black;
   background-color: #506477;
 }
+
+.Box {
+  height: 20px;
+  width: 400px;
+  background-color: #91b4d5;
+  border-radius: 4px;
+}
+
+li {
+  list-style-type: none;
+}

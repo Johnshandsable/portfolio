@@ -1,10 +1,31 @@
 import './App.css';
+
+import { BrowserRouter as Router, Link } from 'react-router-dom';
+
 import { fade, makeStyles } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/styles';
+
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
+import MenuItem from '@material-ui/core/MenuItem';
+import MenuList from '@material-ui/core/MenuList';
 import Typography from '@material-ui/core/Typography';
+import TechSection from '../TechSection/TechSection';
 
 function App() {
+  const theme = createMuiTheme({
+    palette: {
+      primary: {
+        main: '#df4576',
+      },
+      secondary: {
+        main: '#27e8a7',
+      },
+      type: 'dark',
+    },
+  });
+
   const useStyles = makeStyles((theme) => ({
     grow: {
       flexGrow: 1,
@@ -19,33 +40,45 @@ function App() {
   const classes = useStyles();
 
   return (
-    <div className="App">
-      <Grid className={classes.grow} container spacing={3}>
-        <Grid item xs={12}>
-          <Typography
-            variant="h2"
-            style={{
-              fontFamily: 'monaco',
-              color: '#df4576',
-            }}
-          >
-            John Shands
-          </Typography>
-          <Typography
-            variant="h4"
-            style={{
-              color: '#27e8a7',
-            }}
-          >
-            Full-Stack Developer
-          </Typography>
-        </Grid>
-        <Grid item xs={12} className={classes.end}>
-          <Button variant="outlined">Resume</Button>
-          <Button variant="outlined">Projects</Button>
-        </Grid>
-      </Grid>
-    </div>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <div className="App">
+          <Grid className={classes.grow} container spacing={3}>
+            <Grid item xs={12} sm={6}>
+              <Typography
+                variant="h2"
+                color="primary"
+                style={{
+                  fontFamily: 'monaco',
+                  textAlign: 'center',
+                }}
+              >
+                John Shands
+              </Typography>
+              <div className="Box"></div>
+              <Typography
+                variant="h4"
+                style={{
+                  color: '#27e8a7',
+                }}
+              >
+                Full-Stack Developer
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={6} className={classes.end}>
+              <Button
+                component={Link}
+                to={process.env.PUBLIC_URL + 'resume.pdf'}
+                variant="outlined"
+              >
+                Get Resume
+              </Button>
+            </Grid>
+          </Grid>
+          <TechSection />
+        </div>
+      </ThemeProvider>
+    </Router>
   );
 }
 
