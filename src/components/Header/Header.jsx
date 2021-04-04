@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { Link } from "react-router-dom";
-import Toolbar from "@material-ui/core/Toolbar";
 import Button from "@material-ui/core/Button";
+import Link from "@material-ui/core/Link";
+import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import GetAppIcon from "@material-ui/icons/GetApp";
 
@@ -40,7 +40,7 @@ export default function Header() {
           className={classes.button}
           component={Link}
           download
-          to={process.env.PUBLIC_URL + "ShandsJohn-R.pdf"}
+          href={process.env.PUBLIC_URL + "ShandsJohn-R.pdf"}
           color="secondary"
           variant="contained"
           endIcon={<GetAppIcon />}
