@@ -24,8 +24,16 @@ function ProjectsSection() {
       border: "none",
     },
     link: {
-      color: "#fff",
+      color: "black",
       fontSize: 18,
+    },
+    title: {
+      color: "black",
+      fontSize: 32,
+    },
+    subTitle: {
+      fontFamily: "Crimson Pro, serif",
+      fontSize: 22,
     },
   });
   const classes = useStyles();
@@ -85,10 +93,16 @@ function ProjectsSection() {
                   title={project.title}
                 />
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
+                  <Typography
+                    gutterBottom
+                    className={classes.title}
+                    variant="h5"
+                    component="h2"
+                  >
                     {project.title}
                   </Typography>
                   <Typography
+                    className={classes.subTitle}
                     variant="body2"
                     color="textSecondary"
                     component="p"

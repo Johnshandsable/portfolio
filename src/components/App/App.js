@@ -21,15 +21,15 @@ function App() {
   const theme = createMuiTheme({
     palette: {
       primary: {
-        main: "#df4576",
+        main: "#2d3436",
       },
       secondary: {
         main: "#27e8a7",
       },
-      type: "dark",
+      type: "light",
     },
     typography: {
-      fontFamily: "monaco, Consolas, Lucida Console, monospace",
+      fontFamily: "'Dancing Script', cursive",
     },
   });
 
