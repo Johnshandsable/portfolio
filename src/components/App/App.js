@@ -24,7 +24,7 @@ function App() {
         main: "#2d3436",
       },
       secondary: {
-        main: "#27e8a7",
+        main: "#6c5ce7",
       },
       type: "light",
     },

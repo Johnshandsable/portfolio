@@ -12,8 +12,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
   },
   secondary: {
+    fontFamily: "Crimson Pro, serif",
     marginLeft: 25,
     textAlign: "left",
+  },
+  button: {
+    fontFamily: "Crimson Pro, serif",
   },
 }));
 
@@ -33,6 +37,7 @@ export default function Header() {
           John Shands
         </Typography>
         <Button
+          className={classes.button}
           component={Link}
           to={process.env.PUBLIC_URL + "ShandsJohn-R.pdf"}
           color="secondary"
