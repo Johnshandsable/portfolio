@@ -1,14 +1,11 @@
 import "./App.css";
 
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 // Material UI
-import { makeStyles } from "@material-ui/core/styles";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { ThemeProvider } from "@material-ui/styles";
-import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
 
 import AboutSection from "../AboutSection/AboutSection";
 import Experience from "../Experience/Experience";
@@ -31,20 +28,6 @@ function App() {
       fontFamily: "'Dancing Script', cursive",
     },
   });
-
-  const useStyles = makeStyles((theme) => ({
-    grow: {
-      flexGrow: 1,
-      backgroundColor: "#506477",
-      marginTop: "10%",
-    },
-    end: {
-      justifyContent: "center",
-      alignItems: "flex-end",
-    },
-  }));
-
-  const classes = useStyles();
 
   return (
     <Router>
