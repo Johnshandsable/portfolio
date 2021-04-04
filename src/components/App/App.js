@@ -54,11 +54,9 @@ function App() {
           <Header />
           <Grid container spacing={3}>
             <AboutSection />
+            <ProjectsSection />
             <Experience />
             <Footer />
-            {/* <AboutSection />
-          <TechSection />
-          <ProjectsSection /> */}
           </Grid>
         </div>
       </ThemeProvider>
