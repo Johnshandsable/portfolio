@@ -41,7 +41,7 @@ export default function Header() {
           component={Link}
           to={process.env.PUBLIC_URL + "ShandsJohn-R.pdf"}
           color="secondary"
-          variant="outlined"
+          variant="contained"
           endIcon={<GetAppTwoToneIcon />}
         >
           Download Resume
