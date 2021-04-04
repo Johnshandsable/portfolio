@@ -39,6 +39,7 @@ export default function Header() {
         <Button
           className={classes.button}
           component={Link}
+          download
           to={process.env.PUBLIC_URL + "ShandsJohn-R.pdf"}
           color="secondary"
           variant="contained"
