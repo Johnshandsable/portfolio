@@ -17,7 +17,7 @@ function ProjectsSection() {
       // backgroundColor: "#b2bec3",
       marginLeft: 10,
       marginRight: 10,
-      height: 425,
+      height: 500,
     },
   });
   const classes = useStyles();
@@ -36,32 +36,28 @@ function ProjectsSection() {
     {
       title: "Group Giphy",
       img: "screen2.png",
-      description: `Native Plantly is a full-stack CRUD application built using
-      React, Node, PostgreSQL, and Express. Features include users
-      being able to search for native plants by their location. Data
-      is populated by NatureServe and Trefle.io. Users can also create
-      gardens to add, remove, and edit plants at their will.`,
-      source: `https://github.com/Johnshandsable/native-plantly`,
+      description: `Group Giphy is a search and favoriting
+      application which allows the user to save gifs and sort them into categories.
+      This project was built over a day and utilizes React, Redux, Redux-Saga and
+      integrates them with a 3rd party API.`,
+      source: `https://github.com/Johnshandsable/group-giphy`,
     },
     {
       title: "Weekend Movie",
       img: "screen3.png",
-      description: `Native Plantly is a full-stack CRUD application built using
-      React, Node, PostgreSQL, and Express. Features include users
-      being able to search for native plants by their location. Data
-      is populated by NatureServe and Trefle.io. Users can also create
-      gardens to add, remove, and edit plants at their will.`,
-      source: `https://github.com/Johnshandsable/native-plantly`,
+      description: `Weekend Movie is a full-stack CRUD application built using
+      React, Node, PostgreSQL, and Express. Features include users being able to
+      search for movies, add movies into the database, and click on movies to
+      be able to see descriptions about the movie.`,
+      source: `https://github.com/Johnshandsable/weekend-movie`,
     },
     {
       title: "Olive",
       img: "screen4.png",
-      description: `Native Plantly is a full-stack CRUD application built using
-      React, Node, PostgreSQL, and Express. Features include users
-      being able to search for native plants by their location. Data
-      is populated by NatureServe and Trefle.io. Users can also create
-      gardens to add, remove, and edit plants at their will.`,
-      source: `https://github.com/Johnshandsable/native-plantly`,
+      description: `Olive is an open-source project designed to track client intake for
+      local nonprofits in the Kansas City area. Features include being able to create an
+      organization, logging users in for your service, and then track clients and services provided.`,
+      source: `https://github.com/Johnshandsable/olive`,
     },
   ];
 
@@ -74,6 +70,7 @@ function ProjectsSection() {
               <CardActionArea>
                 <CardMedia
                   component="img"
+                  width="100%"
                   alt={project.title}
                   image={process.env.PUBLIC_URL + project.img}
                   title={project.title}
