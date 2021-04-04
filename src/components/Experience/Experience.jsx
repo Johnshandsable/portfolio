@@ -1,8 +1,5 @@
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
 import Grid from "@material-ui/core/Grid";
-import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
 function Experience() {
@@ -20,7 +17,10 @@ function Experience() {
   return (
     <Grid item xs={12}>
       <center>
-        <img src="https://img.icons8.com/clouds/100/000000/source-code.png" />
+        <img
+          src="https://img.icons8.com/clouds/100/000000/source-code.png"
+          alt="frontend icon"
+        />
         <Typography className={classes.title} gutterBottom>
           Frontend
         </Typography>
@@ -29,7 +29,10 @@ function Experience() {
         <li>Javascript / jQuery </li>
         <li>React / Redux / Sagas</li>
 
-        <img src="https://img.icons8.com/clouds/100/000000/server.png" />
+        <img
+          src="https://img.icons8.com/clouds/100/000000/server.png"
+          alt="server icon"
+        />
         <Typography className={classes.title} gutterBottom>
           Server
         </Typography>
@@ -38,7 +41,10 @@ function Experience() {
         <li>Python / Django / Flask</li>
         <li>REST API Design</li>
 
-        <img src="https://img.icons8.com/clouds/100/000000/data-configuration.png" />
+        <img
+          src="https://img.icons8.com/clouds/100/000000/data-configuration.png"
+          alt="database icon"
+        />
         <Typography className={classes.title} gutterBottom>
           Database
         </Typography>

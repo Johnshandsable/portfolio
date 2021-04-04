@@ -14,7 +14,6 @@ import AboutSection from "../AboutSection/AboutSection";
 import Experience from "../Experience/Experience";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import TechSection from "../TechSection/TechSection";
 import ProjectsSection from "../ProjectsSection/ProjectsSection";
 
 function App() {
