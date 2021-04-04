@@ -3,6 +3,7 @@ html {
   margin: 0;
   padding: 20;
   font-family: monaco, Consolas, Lucida Console, monospace;
+  background-color: #424242;
 }
 
 .App {

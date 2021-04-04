@@ -11,6 +11,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
 import AboutSection from "../AboutSection/AboutSection";
+import Experience from "../Experience/Experience";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import TechSection from "../TechSection/TechSection";
@@ -51,10 +52,14 @@ function App() {
       <ThemeProvider theme={theme}>
         <div className="App">
           <Header />
-          <Footer />
-          {/* <AboutSection />
+          <Grid container spacing={3}>
+            <AboutSection />
+            <Experience />
+            <Footer />
+            {/* <AboutSection />
           <TechSection />
           <ProjectsSection /> */}
+          </Grid>
         </div>
       </ThemeProvider>
     </Router>
