@@ -16,8 +16,10 @@ function ProjectsSection() {
       minWidth: 275,
       marginLeft: 10,
       marginRight: 10,
-      minHeight: 400,
-      border: "none",
+      height: 600,
+    },
+    description: {
+      height: 300,
     },
     link: {
       color: "black",
@@ -30,6 +32,13 @@ function ProjectsSection() {
     subTitle: {
       fontFamily: "Crimson Pro, serif",
       fontSize: 22,
+    },
+    cardImage: {
+      height: 200,
+      maxWidth: "100%",
+      maxHeight: "100%",
+      margin: "0 auto",
+      display: "block",
     },
   });
   const classes = useStyles();
@@ -77,18 +86,18 @@ function ProjectsSection() {
     <>
       {projects.map((project) => {
         return (
-          <Grid item xs={12} md={6} lg={4} xl={3}>
+          <Grid item xs={12} sm={6} md={6} lg={4} xl={3}>
             <Card className={classes.root}>
               <CardActionArea>
                 <CardMedia
+                  className={classes.cardImage}
                   component="img"
-                  top={0}
-                  height="50%"
+                  height={200}
                   alt={project.title}
                   image={process.env.PUBLIC_URL + project.img}
                   title={project.title}
                 />
-                <CardContent>
+                <CardContent className={classes.description}>
                   <Typography
                     gutterBottom
                     className={classes.title}
