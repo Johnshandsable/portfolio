@@ -1,27 +1,27 @@
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from "@material-ui/core/styles";
+import Grid from "@material-ui/core/Grid";
+import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 
 function TechSection() {
+  const useStyles = makeStyles({
+    title: {
+      color: "black",
+      fontSize: 32,
+    },
+    subTitle: {
+      fontFamily: "Crimson Pro, serif",
+      fontSize: 22,
+    },
+  });
+  const classes = useStyles();
+
   return (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6} md={4}>
         <Paper>
-          <Typography
-            variant="h4"
-            style={{
-              fontFamily: 'monaco',
-            }}
-          >
-            Languages
-          </Typography>
-          <Typography
-            variant="h5"
-            color="secondary"
-            style={{
-              fontFamily: 'monaco',
-            }}
-          >
+          <Typography className={classes.title}>Languages</Typography>
+          <Typography variant="h5" color="secondary">
             <li>HTML / CSS</li>
             <li>Javascript</li>
             <li>Python</li>
@@ -35,7 +35,7 @@ function TechSection() {
           <Typography
             variant="h4"
             style={{
-              fontFamily: 'monaco',
+              fontFamily: "monaco",
             }}
           >
             Tools / Frameworks
@@ -44,7 +44,7 @@ function TechSection() {
             variant="h5"
             color="secondary"
             style={{
-              fontFamily: 'monaco',
+              fontFamily: "monaco",
             }}
           >
             <li>Bootstrap / Material UI</li>

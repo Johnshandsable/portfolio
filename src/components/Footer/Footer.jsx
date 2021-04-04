@@ -9,37 +9,28 @@ import IconButton from "@material-ui/core/IconButton";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        John Shands
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
+function Footer() {
+  const useStyles = makeStyles((theme) => ({
+    footer: {
+      padding: theme.spacing(4, 0),
+      position: "relative",
+      width: "100%",
+      bottom: 0,
+      height: 100,
+    },
+    link: {
+      color: "black",
+      paddingTop: 10,
+      paddingLeft: 10,
+      paddingRight: 10,
+    },
+    footerTitle: {
+      color: "black",
+      fontFamily: "Crimson Pro, serif",
+      fontSize: 20,
+    },
+  }));
 
-const useStyles = makeStyles((theme) => ({
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(4, 0),
-    position: "relative",
-    width: "100%",
-    bottom: 0,
-    height: 100,
-  },
-  link: {
-    color: "#fff",
-    paddingTop: 10,
-    paddingLeft: 10,
-    paddingRight: 10,
-  },
-}));
-
-export default function Footer() {
   const classes = useStyles();
 
   return (
@@ -62,8 +53,19 @@ export default function Footer() {
             <LinkedInIcon fontSize="large" />
           </Link>
         </IconButton>
-        <Copyright />
+        <center>
+          <Typography className={classes.footerTitle}>
+            {"Copyright © "}
+            <Link color="inherit" href="https://material-ui.com/">
+              John Shands
+            </Link>{" "}
+            {new Date().getFullYear()}
+            {"."}
+          </Typography>
+        </center>
       </Container>
     </footer>
   );
 }
+
+export default Footer;
