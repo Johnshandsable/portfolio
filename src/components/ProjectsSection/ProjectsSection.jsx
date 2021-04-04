@@ -6,9 +6,12 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Grid from "@material-ui/core/Grid";
+import IconButton from "@material-ui/core/IconButton";
+import Link from "@material-ui/core/Link";
 import Typography from "@material-ui/core/Typography";
 
 import CodeIcon from "@material-ui/icons/Code";
+import GitHubIcon from "@material-ui/icons/GitHub";
 
 function ProjectsSection() {
   const useStyles = makeStyles({
@@ -17,7 +20,12 @@ function ProjectsSection() {
       // backgroundColor: "#b2bec3",
       marginLeft: 10,
       marginRight: 10,
-      height: 500,
+      minHeight: 400,
+      border: "none",
+    },
+    link: {
+      color: "#fff",
+      fontSize: 18,
     },
   });
   const classes = useStyles();
@@ -39,7 +47,7 @@ function ProjectsSection() {
       description: `Group Giphy is a search and favoriting
       application which allows the user to save gifs and sort them into categories.
       This project was built over a day and utilizes React, Redux, Redux-Saga and
-      integrates them with a 3rd party API.`,
+      integrates them with the Giphy API.`,
       source: `https://github.com/Johnshandsable/group-giphy`,
     },
     {
@@ -70,7 +78,8 @@ function ProjectsSection() {
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  width="100%"
+                  top={0}
+                  height="50%"
                   alt={project.title}
                   image={process.env.PUBLIC_URL + project.img}
                   title={project.title}
@@ -89,9 +98,11 @@ function ProjectsSection() {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="medium" color="primary" endIcon={<CodeIcon />}>
-                  View Source
-                </Button>
+                <IconButton>
+                  <Link className={classes.link} href={project.source}>
+                    <GitHubIcon fontSize="large" />
+                  </Link>
+                </IconButton>
               </CardActions>
             </Card>
           </Grid>
