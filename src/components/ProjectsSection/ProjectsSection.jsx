@@ -33,6 +33,10 @@ function ProjectsSection() {
       fontFamily: "Crimson Pro, serif",
       fontSize: 22,
     },
+    source: {
+      fontFamily: "Crimson Pro, serif",
+      fontSize: 18,
+    },
     cardImage: {
       height: 200,
       maxWidth: "100%",
@@ -59,7 +63,7 @@ function ProjectsSection() {
       img: "screen2.png",
       description: `Group Giphy is a search and favoriting
       application which allows the user to save gifs and sort them into categories.
-      This project was built over a day and utilizes React, Redux, Redux-Saga and
+      This project was built over a day and utilizing React, Redux, Redux-Saga and
       integrates them with the Giphy API.`,
       source: `https://github.com/Johnshandsable/group-giphy`,
     },
@@ -77,7 +81,7 @@ function ProjectsSection() {
       img: "screen4.png",
       description: `Olive is an open-source project designed to track client intake for
       local nonprofits in the Kansas City area. Features include being able to create an
-      organization, logging users in for your service, and then track clients and services provided.`,
+      organization, logging users in for the service, and then track clients and services provided.`,
       source: `https://github.com/Johnshandsable/olive`,
     },
   ];
@@ -117,6 +121,14 @@ function ProjectsSection() {
                 </CardContent>
               </CardActionArea>
               <CardActions>
+                <Typography
+                  variant="body2"
+                  color="secondary"
+                  component="p"
+                  className={classes.source}
+                >
+                  View Source Code
+                </Typography>
                 <IconButton>
                   <Link className={classes.link} href={project.source}>
                     <GitHubIcon fontSize="large" />
