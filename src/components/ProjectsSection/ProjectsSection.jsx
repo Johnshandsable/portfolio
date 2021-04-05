@@ -22,7 +22,7 @@ function ProjectsSection() {
       height: 300,
     },
     link: {
-      color: "black",
+      color: "#6c5ce7",
       fontSize: 18,
     },
     title: {
@@ -36,6 +36,7 @@ function ProjectsSection() {
     source: {
       fontFamily: "Crimson Pro, serif",
       fontSize: 18,
+      paddingLeft: 10,
     },
     cardImage: {
       height: 200,
@@ -121,17 +122,12 @@ function ProjectsSection() {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Typography
-                  variant="body2"
-                  color="secondary"
-                  component="p"
-                  className={classes.source}
-                >
-                  View Source Code
+                <Typography color="secondary" className={classes.source}>
+                  View on GitHub
                 </Typography>
                 <IconButton>
                   <Link className={classes.link} href={project.source}>
-                    <GitHubIcon fontSize="large" />
+                    <GitHubIcon fontSize="medium" />
                   </Link>
                 </IconButton>
               </CardActions>

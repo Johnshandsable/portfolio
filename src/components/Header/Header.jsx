@@ -43,7 +43,7 @@ export default function Header() {
           href={process.env.PUBLIC_URL + "ShandsJohn-R.pdf"}
           color="secondary"
           variant="contained"
-          endIcon={<GetAppIcon />}
+          starticon={<GetAppIcon />}
         >
           Download Resume
         </Button>
