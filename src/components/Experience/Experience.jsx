@@ -1,15 +1,15 @@
-import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
-import Typography from "@material-ui/core/Typography";
+import { makeStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 function Experience() {
   const useStyles = makeStyles({
     title: {
-      color: "black",
+      color: 'black',
       fontSize: 32,
     },
     subTitle: {
-      fontFamily: "Crimson Pro, serif",
+      fontFamily: 'Crimson Pro, serif',
       fontSize: 22,
     },
   });
@@ -49,7 +49,6 @@ function Experience() {
           Database
         </Typography>
         <li>Mongo DB</li>
-        <li>SQL</li>
         <li>MySQL</li>
         <li>PostgreSQL</li>
       </center>
