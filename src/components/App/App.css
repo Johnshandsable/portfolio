@@ -8,10 +8,7 @@ html {
   background: linear-gradient(to bottom, #fff 0%, #74b9ff 100%);
   background-repeat: no-repeat;
   background-color: #74b9ff; /* ending colour of gradient */
-}
-
-.App {
-  top: 0;
+  overflow-x: hidden;
 }
 
 li {
